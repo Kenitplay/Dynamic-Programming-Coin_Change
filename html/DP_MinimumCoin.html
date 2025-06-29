@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coin Change DP Table</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2936/2936744.png" />
+  <link rel="stylesheet" href="../css/Page.css">
+</head>
+<body class="min-h-screen text-gray-200 font-sans">
+
+  <div class="px-4 pt-6">
+    <a href="index.html" class="inline-flex items-center text-sm text-green-300 hover:text-green-400 transition">
+      <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+           xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+      </svg>
+      Back to Menu
+    </a>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 py-10 space-y-10">
+    <div class="text-center">
+      <h1 class="text-4xl font-extrabold text-green-400 drop-shadow-md">💰 Coin Change DP Table Visualizer</h1>
+      <p class="text-gray-400 mt-2 text-lg">Find the minimum coins needed to make an amount</p>
+    </div>
+
+    <div class="bg-gray-800/70 backdrop-blur-md border border-gray-700 rounded-2xl shadow-2xl p-8 space-y-6">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label for="coins" class="block font-semibold text-gray-300 mb-1">Coins (comma separated):</label>
+          <input id="coins" value="1, 2, 5" type="text"
+            class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md text-white focus:ring-2 focus:ring-green-400 focus:outline-none"
+            placeholder="e.g. 1, 2, 5">
+        </div>
+        <div>
+          <label for="amount" class="block font-semibold text-gray-300 mb-1">Amount:</label>
+          <input id="amount" value="11" type="number"
+            class="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-md text-white focus:ring-2 focus:ring-green-400 focus:outline-none"
+            placeholder="e.g. 11">
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button onclick="generateSolution()"
+          class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition duration-200">
+          🚀 Generate Solution
+        </button>
+        <div id="error" class="mt-3 text-red-400 font-medium"></div>
+      </div>
+    </div>
+
+    <div id="result" class="hidden text-lg font-semibold text-green-300 bg-gray-800 border border-green-500 p-4 rounded-lg shadow"></div>
+    <div id="coins-used" class="hidden text-base text-blue-300 bg-gray-800 border border-blue-500 p-4 rounded-lg shadow"></div>
+
+    <div id="dp-table-container" class="overflow-x-auto bg-gray-900 border border-gray-700 rounded-2xl shadow-lg p-4"></div>
+  </div>
+
+  <script src="../js/DP_MinimumCoin.js"></script>
+</body>
+</html>
