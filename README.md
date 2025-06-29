@@ -30,6 +30,8 @@ cd coin-change-dp-visualizer
 Just open **index.html** in your browser, or use Live Server if you're using VS Code
 
 
+---
+
 ### 📁 Project Structure
 
 ```bash
